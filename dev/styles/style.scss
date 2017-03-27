@@ -209,7 +209,7 @@ header{
 }
 
 .headerTop{
-	height: calc(100vh - 130px);
+	min-height: calc(100vh - 130px);
 	display: flex;
 	justify-content:center;
 	flex-direction:column;
@@ -244,8 +244,6 @@ header{
 		}
 	}
 }
-
-
 
 
 //about
@@ -468,8 +466,7 @@ header{
 
 .contactForm{
 	width: calc(66% - 12px);
-	// margin-right: 12px;
-	input, textarea{
+	input, textarea,{
 		margin: 12px;
 		padding: 5px;
 		border:none;
@@ -482,7 +479,7 @@ header{
 			border-bottom: 1px solid $tertiaryColorDark;
 		} 
 	}
-	input{
+	input,{
 		width: calc(50% - 26px);
 	}
 	textarea{
@@ -497,6 +494,10 @@ header{
 	display: flex;
 	flex-wrap: wrap;
 	align-content:space-around;
+	.connectEmailText{
+		width: 100%;
+		display: inline-block;
+	}
 	.contactIconSpan{
 		width:50%;
 		display:inline-block;
@@ -617,7 +618,6 @@ nav.navSideBar {
 	display: none;
 }
 
-
 @media (max-width: 1040px) {
 	.wrapper{
 		width:70%;
@@ -696,11 +696,11 @@ nav.navSideBar {
 		padding-left: 0;
 	}
 
-nav.navTop{
-	li{
-		padding: 0 5px;
+	nav.navTop{
+		li{
+			padding: 0 5px;
+		}
 	}
-}
 
 	nav.navSideBar {
 		display: none;
@@ -758,7 +758,6 @@ nav.navTop{
 }
 
 @media (max-width: 410px) {
-
 	nav.navTop{
 		position: fixed;
 		z-index: 2;
@@ -769,6 +768,31 @@ nav.navTop{
 	}
 	nav.navSideBar {
 		display: block;
+	}
+}
+
+@media (max-height: 400px) and (orientation: landscape) {
+	h1{
+		font-size: 1.6rem;
+	}
+	header{
+		#hello{
+			font-size: 0.8srem;
+			margin-bottom: -8px;
+		}
+		#imADev{
+			font-size: 1rem;
+			margin-top: -8px;
+			margin-bottom: 20px;
+		}
+	}
+
+	.headerTop{
+		min-height: calc(100vh - 100px);
+	}
+
+	.headerBottom{
+		height: 50px;
 	}
 
 }

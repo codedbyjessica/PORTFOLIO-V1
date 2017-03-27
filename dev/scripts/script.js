@@ -1,10 +1,19 @@
+var portfolio =[]
+var currentNav = {}; 
+
 /////Smooth Scroll
-$(function() {
+currentNav.smoothScroll = function () {
 	$("a").click(function() {
+		//replace the first forward slash (/) in the pathname for the current location
+		//compare it to the link that's been clicked
+		//check link matches current domain
 		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-		var target = $(this.hash);
-		target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			// Assign the variable target, with the hash of the link that's been clicked (i.e. #hash)
+			var target = $(this.hash);
+			// check if element exists (with target.length)
+			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 			if (target.length) {
+				//animation
 				$('html,body').animate({
 					scrollTop: target.offset().top
 				}, 500);
@@ -12,38 +21,8 @@ $(function() {
 			}
 		}
 	});
-});
+};
 
-// $(function() {
-// 		window.onscroll = function () {
-// 	  var headerPosition = document.getElementById("about").offsetTop;
-// 	  var scrollPosition = document.getElementsByTagName("body")[0].scrollTop;
-	  
-// 	  if(scrollPosition >= headerPosition)
-// 	  		console.log("working!")
-// 		document.getElementById("fixedLogo").className = "";
-// 	  else
-// 		document.getElementById("fixedLogo").className = "displayNone";
-// 	};
-// });
-
-// $(function() {
-// 		window.onscroll = function () {
-// 	  var headerPosition = $("header")[0].offsetTop;
-// 	  var scrollPosition = $("body")[0].scrollTop;
-// 	  console.log(scrollPosition,headerPosition);
-	  
-// 	  if(scrollPosition > headerPosition){
-// 	  	$("#fixedLogo").removeClass("displayNone");
-// 	  }else{
-// 	  	$("#fixedLogo").addClass("displayNone");
-// 	  }
-		
-// 	};
-// });
-
-var app =[]
-var currentNav = {}; 
 // select all links in header
 var navItems = $('.navSideBar a');
 // empty array to store hrefs (ids)
@@ -57,7 +36,7 @@ for (var i = 0; i < navItems.length; i++) {
 }
 console.log(navHrefs);
 
-currentNav.scrollEffect = function () {
+currentNav.colorChange = function () {
 	//when scrolling
 	$(window).on('scroll', function () {
 		// get position of the window from top of page
@@ -71,7 +50,7 @@ currentNav.scrollEffect = function () {
 			var sectionId = navHrefs[i];
 			// get position of each section from top of page
 			currentNav.sectionPosition = $(sectionId).offset().top;
-			//but like, not realllyyy top of page (that would be too late), when it hits around halfway
+			//but like, not realllyyy top of page
 			currentNav.sectionPosition -= 100;
 			// get height of each section
 			currentNav.sectionHeight = $(sectionId).height();
@@ -86,33 +65,11 @@ currentNav.scrollEffect = function () {
 	});
 };
 
-// currentNav.showLogo = function () {
-
-// 	currentNav.windowWidth = window.innerWidth;
-
-// 	if (currentNav.windowWidth <= 560) {
-// 		$('#backToTop').hide();
-// 	} else {
-// 		if (currentNav.windowPosition >= $('#imADev').offset().top) {
-// 			$('#backToTop').fadeIn();
-// 			console.log($('#about').offset().top);
-// 		} else {
-// 			$('#backToTop').fadeOut();
-// 		}
-// 	}
-// }; 
-
-app.init = function () {
-	currentNav.scrollEffect();
-	// currentNav.showLogo();
-	// $(window).on('resize', function () {
-	// 	currentNav.showLogo();
-	// });
-	// $(window).on('scroll', function () {
-	// 	currentNav.showLogo();
-	// });
+portfolio.init = function () {
+	currentNav.colorChange();
+	currentNav.smoothScroll();
 };
 
 $(function () {
-	app.init();
+	portfolio.init();
 });
