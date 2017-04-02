@@ -15,18 +15,20 @@ hope you will find it rather semantic
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Coded By Jessica</title>
+	<meta name="description" content="My name is Jessica. I'm a front end web developer based in Toronto. I am passionate about creating beautiful online experiences with clean and dry code that engage and communicate with the user.">
+	<title>Jessica Zhang - Front End Web Developer</title>
 	<link rel="shortcut icon" href="http://codedbyjessica.com/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="http://codedbyjessica.com/favicon.ico" type="image/x-icon">
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<link rel="stylesheet" href="public/styles/style.css">
 	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
 	<script src="https://use.fontawesome.com/4fe2bf7b28.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="public/styles/style.css">
+
 </head>
 
 <body id="top">
-<div class="navTopPlaceholder">
-<nav class="navTop">
+<nav class="navTop navTopAtTop">
 	<div class="wrapper clearfix">
 	<div class="logo">
 		<a href="#top"><img src="images/logo.svg" alt="CBJ Logo" id="logo"></a>
@@ -72,30 +74,6 @@ hope you will find it rather semantic
 	</div>
 	</div>
 </nav>
-</div>
-
-<div class="navSideBarWrapper">
-	<nav class="navSideBar">
-		<ul>
-			<li><a href="#about" class="clearfix">
-				<div class="navBox" title="Go To About"></div>
-				<div class="navLabel">About</div>
-			</a></li>
-			<li><a href="#portfolio" class="clearfix">
-				<div class="navBox" title="Go To Portfolio"></div>
-				<div class="navLabel">Portfolio</div>
-			</a></li>
-			<li><a href="#skills" class="clearfix">
-				<div class="navBox" title="Go To Skills"></div>
-				<div class="navLabel">Skills</div>
-			</a></li>
-			<li><a href="#contact" class="clearfix">
-				<div class="navBox" title="Go To Contact"></div>
-				<div class="navLabel">Contact</div>
-			</a></li>
-		</ul>
-	</nav>
-</div>
 
 <header id="header">
 	<div class="headerBg">
@@ -110,6 +88,7 @@ hope you will find it rather semantic
 		</article>
 	</div>
 	</div>
+	<div class="displayNone">My name is Jessica. I'm a front end web developer based in Toronto. I am passionate about creating beautiful online experiences with clean and dry code that engage and communicate with the user.</div>
 	<article class="headerBottom wrapper clearfix">
 		<div class="headerTag">clean <p>Code</p></div>
 		<div class="headerTag">aesthetic <p>eye</p></div>
@@ -124,13 +103,13 @@ hope you will find it rather semantic
 	<div class="wrapper">
 		<h2><span>about me</span></h2>
 		<div class="about">
-		<article class="aboutDescription">
+		<article class="aboutDescription wow fadeIn">
 			<span class="bold"> Welcome! My name is Jessica. I'm a front end web developer based in Toronto. </span> I am passionate about creating beautiful online experiences with clean and dry code that engage and communicate with the user.
 		</article>
-		<article class="aboutDescription">
+		<article class="aboutDescription wow fadeIn">
 			As a graduate of the <span class="bold">Web Development certificate program</span> at <a href="http://hackeryou.com">HackerYou</a>, I have a solid understanding of current web technologies and practices. I also have a background in biology and medical illustration.
 		</article>
-		<article class="aboutDescription">
+		<article class="aboutDescription wow fadeIn">
 			I love exploring new realms of modern tech and diving deep into fascinating projects. My goal is to combine my technical and creative abilities and make the web an even friendlier place.
 
 		</article>
@@ -142,14 +121,14 @@ hope you will find it rather semantic
 <section id="portfolio">
 	<div class="wrapper clearfix">
 	<h2><span>portfolio</span></h2>
-	<article class="portfolioItem">
+	<article class="portfolioItem wow fadeIn">
 		<div>
 			<div class="projectThumb">
 				<a href="modern" target="_blank"><img src="images/portfolio-modern.png" alt="Project Modern Thumbnail"></a>
 			</div>
 			<div class="projectDescriptionWrapper">
 				<h3><span>modern</span></h3>
-				<h4>psd to responsive</h4>
+				<h4>PSD to Responsive</h4>
 				<div class="projectDescription">
 					<p>
 						<span class="projectSkillUsed">jQuery</span> | 
@@ -171,13 +150,13 @@ hope you will find it rather semantic
 		</div> 
 
 	</article><!-- portfolioItem  -->
-	<article class="portfolioItem ">
+	<article class="portfolioItem wow fadeIn">
 		<div class="projectThumb">
 			<a href="anatomy" target="_blank"><img src="images/portfolio-anatomy.png" alt="Learn Anatomy Thumbnail"></a>
 		</div>
 		<div class="projectDescriptionWrapper">
 			<h3><span>learn anatomy</span></h3>
-			<h4>jQuery interactive app</h4>
+			<h4>jQuery Interactive App</h4>
 			<div class="projectDescription">
 				<p>
 					<span class="projectSkillUsed">JavaScript</span> | 
@@ -198,13 +177,13 @@ hope you will find it rather semantic
 			</div><!-- projectDescription -->
 		</div>
 	</article><!-- portfolioItem  -->
-	<article class="portfolioItem">
+	<article class="portfolioItem wow fadeIn">
 		<div class="projectThumb">
 			<a href="fastfooddiet" target="_blank"><img src="images/portfolio-food.png" alt="Fast Food Diet Thumbnail"></a>
 		</div>
 		<div class="projectDescriptionWrapper">
 			<h3><span>Fast Food Diet</span></h3>
-			<h4>React web app</h4>
+			<h4>React Web App</h4>
 			<div class="projectDescription">
 				<p>
 					<span class="projectSkillUsed">API</span> | 
@@ -217,7 +196,7 @@ hope you will find it rather semantic
 				<p> Powered by the Nutritionix API, Fast Food Diet allows the user to plan fast food meals around their suggested nutrient intake. 
 				</p>
 			</div>
-			<div class="projectDescription">
+			<div class="projectDescription ">
 				<p class="portfolioLinks">
 					<a href="fastfooddiet" target="_blank" class="button">view live</a>
 					<a href="https://github.com/codedbyjessica/HYFastFoodDiet" target="_blank" class="button">github</a>
@@ -225,13 +204,13 @@ hope you will find it rather semantic
 			</div><!-- projectDescription -->
 		</div>
 	</article><!-- portfolioItem -->
-	<article class="portfolioItem">
+	<article class="portfolioItem wow fadeIn">
 		<div class="projectThumb">
 			<a href="zomatosauce" target="_blank"><img src="images/portfolio-zomato.png" alt="Whats on my face Thumbnail"></a>
 		</div>
 		<div class="projectDescriptionWrapper">
 			<h3><span>zomato sauce</span></h3>
-			<h4>Agency API web app</h4>
+			<h4>Agency API Web App</h4>
 			<div class="projectDescription">
 				<p>
 					<span class="projectSkillUsed">API</span> | 
@@ -259,7 +238,7 @@ hope you will find it rather semantic
 <section id="skills">
 	<div class="wrapper">
 	<h2><span>skills</span></h2>
-	<div class="skills">
+	<div class="skills wow fadeIn">
 		<article class="skillsFluent">
 		<h3><span>fluent</span></h3>
 			<span class="skillsIconSpan"><i aria-hidden="true" class="skillsIcon devicon-html5-plain"></i><br />HTML5</span>
@@ -319,7 +298,7 @@ hope you will find it rather semantic
 <section id="contact">
 	<div class="wrapper">
 	<h2><span>contact</span></h2>
-	<div class="contact">
+	<div class="contact wow fadeIn">
 		<article class="contactForm">
 		<h3><span>message</span></h3>
 			<form method="post" action="sendmail.php">
@@ -404,6 +383,8 @@ hope you will find it rather semantic
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
 <script src="public/scripts/script.js"></script>
 
 </body>
