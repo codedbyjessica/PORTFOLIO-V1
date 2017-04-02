@@ -743,12 +743,12 @@ footer{
 		float:none;
 		position: relative;
 		top: 4px;
+		display: inline-block;
 	}
 	.headerTop{
 		display: flex;
 		justify-content:center;
 		flex-direction:column;
-		min-height: calc(100vh - 105px);
 	}
 	.skills{
 		font-size: 12px;
