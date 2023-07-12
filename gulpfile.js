@@ -8,7 +8,6 @@ const babel = require('babelify');
 const browserify = require('browserify');
 const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
-const notify = require('gulp-notify');
 
 const reload = browserSync.reload;
 
@@ -34,10 +33,6 @@ gulp.task('js', () => {
             presets: ['es2015','react']
         })
         .bundle()
-        .on('error',notify.onError({
-            message: "Error: <%= error.message %>",
-            title: 'Error in JS 💀'
-        }))
         .pipe(source('script.js'))
         .pipe(buffer())
         .pipe(gulp.dest('public/scripts'))

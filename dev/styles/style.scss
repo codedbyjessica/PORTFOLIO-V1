@@ -420,14 +420,58 @@ header{
 
 .skills{
 	display: flex;
+	@media (max-width: 1080px) {
+		display: block;
+	}
 }
 
-.skillsFluent, .skillsTools{
+.skillsTools{
+	width: calc(50% - 12px);
+	border: 1px solid $mainColorDark;
+	position: relative;
+	padding: 12px 0;
+	margin-left: 12px;
+	@media (max-width: 1080px) {
+		margin-left: 0;
+		width: 100%;
+	}
+	.skillsToolsListContainer {
+		display: flex;
+		ul {
+			width: 50%;
+		}
+		@media (max-width: 780px) {
+			display: block;
+			ul {
+				width: 100%;
+				&:last-of-type {
+					margin-top: 0;
+				}
+				&:first-of-type {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	h3{
+		span{
+			background:$mainColorLight; 
+		}
+	}
+}
+
+.skillsFluent {
 	width: calc(50% - 12px);
 	border: 1px solid $mainColorDark;
 	position: relative;
 	text-align: center;
 	padding: 12px 0;
+	margin-right: 12px;
+	@media (max-width: 1080px) {
+		margin-right: 0;
+		margin-bottom: 36px;
+		width: 100%;
+	}
 	.skillsIconSpan{
 		width:24%;
 		display:inline-block;
@@ -452,75 +496,25 @@ header{
 	}
 }
 
-.skillsFluent{
-	margin-right: 12px;
-}
 
-.skillsTools{
-	margin-left: 12px;
-}
-
-
-//contact
-
-.contact{
-	display: flex;
-	justify-content: space-between;
-}
-
-.contactForm, .contactConnect{
-	float: left;
-	border: 1px solid $mainColorDark;
-	position: relative;
-	padding: 20px;
-	h3{
-		text-align: center;
-		width:100%;
-		position:absolute;
-		left: 0px;
-		top: -30px;
-		span{
-			padding:0 15px;
-			background:#fff; 
-		}
-	}
-}
-
-.contactForm{
-	width: calc(66% - 12px);
-	input, textarea,{
-		margin: 12px;
-		padding: 5px;
-		border:none;
-		border-bottom: 1px solid $secondaryColorDark;
-		outline: none;
-		&::placeholder{
-			text-transform: uppercase;
-		}
-		&:focus{
-			border-bottom: 1px solid $tertiaryColorDark;
-		} 
-	}
-	input,{
-		width: calc(50% - 26px);
-	}
-	textarea{
-		width: calc(100% - 24px);
+#contact {
+	h2 {
+		margin-bottom: 30px;
 	}
 }
 
 .contactConnect{
-	width: calc(34% - 12px);
 	text-align: center;
 	display: flex;
 	flex-wrap: wrap;
 	align-content:space-around;
 	.connectEmailText{
+		margin-bottom: 10px;
 		width: 100%;
 		display: inline-block;
 	}
 	.contactIconSpan{
-		width:50%;
+		width:25%;
 		display:inline-block;
 		color: $secondaryColorDark;
 		&:hover{
@@ -631,9 +625,9 @@ footer{
 		margin: 0;
 	}
 
-	.contactConnect{
-		margin-top: 36px;
-	}
+	// .contactConnect{
+	// 	margin-top: 36px;
+	// }
 
 	.contactConnect .contactIconSpan{
 		width:24%;
